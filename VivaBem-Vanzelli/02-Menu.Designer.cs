@@ -28,24 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.dgvContato = new System.Windows.Forms.DataGridView();
             this.pnlPlanos = new System.Windows.Forms.Panel();
+            this.dgvValorPlanos = new System.Windows.Forms.DataGridView();
             this.lblValorPlano = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblGeral = new System.Windows.Forms.Label();
-            this.btnEmail = new System.Windows.Forms.Button();
-            this.btnPagamento = new System.Windows.Forms.Button();
-            this.btnExercicio = new System.Windows.Forms.Button();
-            this.btnBanner = new System.Windows.Forms.Button();
-            this.btnMatricula = new System.Windows.Forms.Button();
-            this.btnAjuda = new System.Windows.Forms.Button();
-            this.btnTreino = new System.Windows.Forms.Button();
-            this.btnPlanos = new System.Windows.Forms.Button();
-            this.btnAluno = new System.Windows.Forms.Button();
-            this.btnInstrutor = new System.Windows.Forms.Button();
+            this.lblvalorGeral = new System.Windows.Forms.Label();
             this.pnlCont = new System.Windows.Forms.Panel();
             this.lblExercicios = new System.Windows.Forms.Label();
-            this.lblNumexercicios = new System.Windows.Forms.Label();
+            this.lblNumExercicios = new System.Windows.Forms.Label();
             this.lblMatriculas = new System.Windows.Forms.Label();
             this.lblNumMarticulas = new System.Windows.Forms.Label();
             this.lblTreinos = new System.Windows.Forms.Label();
@@ -57,27 +52,36 @@
             this.lblInstrutores = new System.Windows.Forms.Label();
             this.lblNumInstrutores = new System.Windows.Forms.Label();
             this.pnlUsuario = new System.Windows.Forms.Panel();
-            this.lblHoras = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.dgvValorPlanos = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnEmail = new System.Windows.Forms.Button();
+            this.btnPagamento = new System.Windows.Forms.Button();
+            this.btnExercicio = new System.Windows.Forms.Button();
+            this.btnBanner = new System.Windows.Forms.Button();
+            this.btnMatricula = new System.Windows.Forms.Button();
+            this.btnAjuda = new System.Windows.Forms.Button();
+            this.btnTreino = new System.Windows.Forms.Button();
+            this.btnPlanos = new System.Windows.Forms.Button();
+            this.btnAluno = new System.Windows.Forms.Button();
+            this.btnInstrutor = new System.Windows.Forms.Button();
             this.pctSair = new System.Windows.Forms.PictureBox();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).BeginInit();
             this.pnlPlanos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvValorPlanos)).BeginInit();
             this.pnlCont.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvValorPlanos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctSair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.White;
-            this.pnlMenu.Controls.Add(this.dataGridView1);
+            this.pnlMenu.Controls.Add(this.dgvContato);
             this.pnlMenu.Controls.Add(this.pnlPlanos);
             this.pnlMenu.Controls.Add(this.btnEmail);
             this.pnlMenu.Controls.Add(this.btnPagamento);
@@ -97,17 +101,60 @@
             this.pnlMenu.Size = new System.Drawing.Size(1220, 655);
             this.pnlMenu.TabIndex = 0;
             // 
+            // dgvContato
+            // 
+            this.dgvContato.AllowUserToAddRows = false;
+            this.dgvContato.AllowUserToDeleteRows = false;
+            this.dgvContato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvContato.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvContato.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.dgvContato.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Britannic Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvContato.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvContato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvContato.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvContato.EnableHeadersVisualStyles = false;
+            this.dgvContato.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.dgvContato.Location = new System.Drawing.Point(668, 55);
+            this.dgvContato.Name = "dgvContato";
+            this.dgvContato.RowHeadersVisible = false;
+            this.dgvContato.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvContato.Size = new System.Drawing.Size(547, 244);
+            this.dgvContato.TabIndex = 35;
+            this.dgvContato.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContato_CellContentClick);
+            // 
             // pnlPlanos
             // 
             this.pnlPlanos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
             this.pnlPlanos.Controls.Add(this.dgvValorPlanos);
             this.pnlPlanos.Controls.Add(this.lblValorPlano);
             this.pnlPlanos.Controls.Add(this.label4);
-            this.pnlPlanos.Controls.Add(this.lblGeral);
+            this.pnlPlanos.Controls.Add(this.lblvalorGeral);
             this.pnlPlanos.Location = new System.Drawing.Point(880, 305);
             this.pnlPlanos.Name = "pnlPlanos";
             this.pnlPlanos.Size = new System.Drawing.Size(335, 345);
             this.pnlPlanos.TabIndex = 13;
+            // 
+            // dgvValorPlanos
+            // 
+            this.dgvValorPlanos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvValorPlanos.Location = new System.Drawing.Point(5, 115);
+            this.dgvValorPlanos.Name = "dgvValorPlanos";
+            this.dgvValorPlanos.Size = new System.Drawing.Size(325, 225);
+            this.dgvValorPlanos.TabIndex = 15;
             // 
             // lblValorPlano
             // 
@@ -135,144 +182,24 @@
             this.label4.Text = "R$ GERAL";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblGeral
+            // lblvalorGeral
             // 
-            this.lblGeral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
-            this.lblGeral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblGeral.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGeral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.lblGeral.Location = new System.Drawing.Point(5, 5);
-            this.lblGeral.Name = "lblGeral";
-            this.lblGeral.Size = new System.Drawing.Size(325, 70);
-            this.lblGeral.TabIndex = 32;
-            this.lblGeral.Text = "000";
-            this.lblGeral.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // btnEmail
-            // 
-            this.btnEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnEmail.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnEmail;
-            this.btnEmail.FlatAppearance.BorderSize = 0;
-            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmail.Location = new System.Drawing.Point(705, 480);
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(170, 170);
-            this.btnEmail.TabIndex = 12;
-            this.btnEmail.UseVisualStyleBackColor = false;
-            // 
-            // btnPagamento
-            // 
-            this.btnPagamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
-            this.btnPagamento.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnPagamento;
-            this.btnPagamento.FlatAppearance.BorderSize = 0;
-            this.btnPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagamento.Location = new System.Drawing.Point(530, 480);
-            this.btnPagamento.Name = "btnPagamento";
-            this.btnPagamento.Size = new System.Drawing.Size(170, 170);
-            this.btnPagamento.TabIndex = 11;
-            this.btnPagamento.UseVisualStyleBackColor = false;
-            // 
-            // btnExercicio
-            // 
-            this.btnExercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnExercicio.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnExercicios;
-            this.btnExercicio.FlatAppearance.BorderSize = 0;
-            this.btnExercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExercicio.Location = new System.Drawing.Point(355, 480);
-            this.btnExercicio.Name = "btnExercicio";
-            this.btnExercicio.Size = new System.Drawing.Size(170, 170);
-            this.btnExercicio.TabIndex = 10;
-            this.btnExercicio.UseVisualStyleBackColor = false;
-            // 
-            // btnBanner
-            // 
-            this.btnBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
-            this.btnBanner.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnBanner;
-            this.btnBanner.FlatAppearance.BorderSize = 0;
-            this.btnBanner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBanner.Location = new System.Drawing.Point(180, 480);
-            this.btnBanner.Name = "btnBanner";
-            this.btnBanner.Size = new System.Drawing.Size(170, 170);
-            this.btnBanner.TabIndex = 9;
-            this.btnBanner.UseVisualStyleBackColor = false;
-            // 
-            // btnMatricula
-            // 
-            this.btnMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnMatricula.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnMatricula;
-            this.btnMatricula.FlatAppearance.BorderSize = 0;
-            this.btnMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMatricula.Location = new System.Drawing.Point(5, 480);
-            this.btnMatricula.Name = "btnMatricula";
-            this.btnMatricula.Size = new System.Drawing.Size(170, 170);
-            this.btnMatricula.TabIndex = 8;
-            this.btnMatricula.UseVisualStyleBackColor = false;
-            // 
-            // btnAjuda
-            // 
-            this.btnAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
-            this.btnAjuda.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnAjuda;
-            this.btnAjuda.FlatAppearance.BorderSize = 0;
-            this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjuda.Location = new System.Drawing.Point(705, 305);
-            this.btnAjuda.Name = "btnAjuda";
-            this.btnAjuda.Size = new System.Drawing.Size(170, 170);
-            this.btnAjuda.TabIndex = 7;
-            this.btnAjuda.UseVisualStyleBackColor = false;
-            // 
-            // btnTreino
-            // 
-            this.btnTreino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnTreino.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnTreino;
-            this.btnTreino.FlatAppearance.BorderSize = 0;
-            this.btnTreino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTreino.Location = new System.Drawing.Point(530, 305);
-            this.btnTreino.Name = "btnTreino";
-            this.btnTreino.Size = new System.Drawing.Size(170, 170);
-            this.btnTreino.TabIndex = 6;
-            this.btnTreino.UseVisualStyleBackColor = false;
-            // 
-            // btnPlanos
-            // 
-            this.btnPlanos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
-            this.btnPlanos.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnPlanos;
-            this.btnPlanos.FlatAppearance.BorderSize = 0;
-            this.btnPlanos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlanos.Location = new System.Drawing.Point(355, 305);
-            this.btnPlanos.Name = "btnPlanos";
-            this.btnPlanos.Size = new System.Drawing.Size(170, 170);
-            this.btnPlanos.TabIndex = 5;
-            this.btnPlanos.UseVisualStyleBackColor = false;
-            // 
-            // btnAluno
-            // 
-            this.btnAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnAluno.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnAlunos;
-            this.btnAluno.FlatAppearance.BorderSize = 0;
-            this.btnAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAluno.Location = new System.Drawing.Point(180, 305);
-            this.btnAluno.Name = "btnAluno";
-            this.btnAluno.Size = new System.Drawing.Size(170, 170);
-            this.btnAluno.TabIndex = 4;
-            this.btnAluno.UseVisualStyleBackColor = false;
-            // 
-            // btnInstrutor
-            // 
-            this.btnInstrutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
-            this.btnInstrutor.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnInstrutor;
-            this.btnInstrutor.FlatAppearance.BorderSize = 0;
-            this.btnInstrutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstrutor.Location = new System.Drawing.Point(5, 305);
-            this.btnInstrutor.Name = "btnInstrutor";
-            this.btnInstrutor.Size = new System.Drawing.Size(170, 170);
-            this.btnInstrutor.TabIndex = 3;
-            this.btnInstrutor.UseVisualStyleBackColor = false;
+            this.lblvalorGeral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
+            this.lblvalorGeral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblvalorGeral.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvalorGeral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.lblvalorGeral.Location = new System.Drawing.Point(5, 5);
+            this.lblvalorGeral.Name = "lblvalorGeral";
+            this.lblvalorGeral.Size = new System.Drawing.Size(325, 70);
+            this.lblvalorGeral.TabIndex = 32;
+            this.lblvalorGeral.Text = "000";
+            this.lblvalorGeral.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // pnlCont
             // 
             this.pnlCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
             this.pnlCont.Controls.Add(this.lblExercicios);
-            this.pnlCont.Controls.Add(this.lblNumexercicios);
+            this.pnlCont.Controls.Add(this.lblNumExercicios);
             this.pnlCont.Controls.Add(this.lblMatriculas);
             this.pnlCont.Controls.Add(this.lblNumMarticulas);
             this.pnlCont.Controls.Add(this.lblTreinos);
@@ -301,18 +228,18 @@
             this.lblExercicios.Text = "EXERCÍCIOS";
             this.lblExercicios.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblNumexercicios
+            // lblNumExercicios
             // 
-            this.lblNumexercicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
-            this.lblNumexercicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNumexercicios.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumexercicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.lblNumexercicios.Location = new System.Drawing.Point(437, 76);
-            this.lblNumexercicios.Name = "lblNumexercicios";
-            this.lblNumexercicios.Size = new System.Drawing.Size(215, 70);
-            this.lblNumexercicios.TabIndex = 30;
-            this.lblNumexercicios.Text = "000";
-            this.lblNumexercicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblNumExercicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
+            this.lblNumExercicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNumExercicios.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumExercicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.lblNumExercicios.Location = new System.Drawing.Point(437, 76);
+            this.lblNumExercicios.Name = "lblNumExercicios";
+            this.lblNumExercicios.Size = new System.Drawing.Size(215, 70);
+            this.lblNumExercicios.TabIndex = 30;
+            this.lblNumExercicios.Text = "000";
+            this.lblNumExercicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // lblMatriculas
             // 
@@ -448,26 +375,26 @@
             // 
             this.pnlUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
             this.pnlUsuario.Controls.Add(this.pctSair);
-            this.pnlUsuario.Controls.Add(this.lblHoras);
+            this.pnlUsuario.Controls.Add(this.lblHora);
             this.pnlUsuario.Controls.Add(this.lblData);
-            this.pnlUsuario.Controls.Add(this.label1);
+            this.pnlUsuario.Controls.Add(this.lblUsuario);
             this.pnlUsuario.Location = new System.Drawing.Point(360, 5);
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(855, 140);
             this.pnlUsuario.TabIndex = 1;
             // 
-            // lblHoras
+            // lblHora
             // 
-            this.lblHoras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
-            this.lblHoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblHoras.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.lblHoras.Location = new System.Drawing.Point(5, 95);
-            this.lblHoras.Name = "lblHoras";
-            this.lblHoras.Size = new System.Drawing.Size(290, 40);
-            this.lblHoras.TabIndex = 37;
-            this.lblHoras.Text = "00:00";
-            this.lblHoras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
+            this.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHora.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.lblHora.Location = new System.Drawing.Point(5, 95);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(290, 40);
+            this.lblHora.TabIndex = 37;
+            this.lblHora.Text = "00:00";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblData
             // 
@@ -482,18 +409,157 @@
             this.lblData.Text = "00/00/0000";
             this.lblData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lblUsuario
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.label1.Location = new System.Drawing.Point(5, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 40);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "USUÁRIO";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
+            this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUsuario.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.lblUsuario.Location = new System.Drawing.Point(5, 5);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(290, 40);
+            this.lblUsuario.TabIndex = 35;
+            this.lblUsuario.Text = "USUÁRIO";
+            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnEmail
+            // 
+            this.btnEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnEmail.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnEmail;
+            this.btnEmail.FlatAppearance.BorderSize = 0;
+            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmail.Location = new System.Drawing.Point(705, 480);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(170, 170);
+            this.btnEmail.TabIndex = 12;
+            this.btnEmail.UseVisualStyleBackColor = false;
+            // 
+            // btnPagamento
+            // 
+            this.btnPagamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.btnPagamento.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnPagamento;
+            this.btnPagamento.FlatAppearance.BorderSize = 0;
+            this.btnPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagamento.Location = new System.Drawing.Point(530, 480);
+            this.btnPagamento.Name = "btnPagamento";
+            this.btnPagamento.Size = new System.Drawing.Size(170, 170);
+            this.btnPagamento.TabIndex = 11;
+            this.btnPagamento.UseVisualStyleBackColor = false;
+            // 
+            // btnExercicio
+            // 
+            this.btnExercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnExercicio.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnExercicios;
+            this.btnExercicio.FlatAppearance.BorderSize = 0;
+            this.btnExercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExercicio.Location = new System.Drawing.Point(355, 480);
+            this.btnExercicio.Name = "btnExercicio";
+            this.btnExercicio.Size = new System.Drawing.Size(170, 170);
+            this.btnExercicio.TabIndex = 10;
+            this.btnExercicio.UseVisualStyleBackColor = false;
+            // 
+            // btnBanner
+            // 
+            this.btnBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.btnBanner.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnBanner;
+            this.btnBanner.FlatAppearance.BorderSize = 0;
+            this.btnBanner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBanner.Location = new System.Drawing.Point(180, 480);
+            this.btnBanner.Name = "btnBanner";
+            this.btnBanner.Size = new System.Drawing.Size(170, 170);
+            this.btnBanner.TabIndex = 9;
+            this.btnBanner.UseVisualStyleBackColor = false;
+            // 
+            // btnMatricula
+            // 
+            this.btnMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnMatricula.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnMatricula;
+            this.btnMatricula.FlatAppearance.BorderSize = 0;
+            this.btnMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMatricula.Location = new System.Drawing.Point(5, 480);
+            this.btnMatricula.Name = "btnMatricula";
+            this.btnMatricula.Size = new System.Drawing.Size(170, 170);
+            this.btnMatricula.TabIndex = 8;
+            this.btnMatricula.UseVisualStyleBackColor = false;
+            // 
+            // btnAjuda
+            // 
+            this.btnAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.btnAjuda.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnAjuda;
+            this.btnAjuda.FlatAppearance.BorderSize = 0;
+            this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjuda.Location = new System.Drawing.Point(705, 305);
+            this.btnAjuda.Name = "btnAjuda";
+            this.btnAjuda.Size = new System.Drawing.Size(170, 170);
+            this.btnAjuda.TabIndex = 7;
+            this.btnAjuda.UseVisualStyleBackColor = false;
+            // 
+            // btnTreino
+            // 
+            this.btnTreino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnTreino.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnTreino;
+            this.btnTreino.FlatAppearance.BorderSize = 0;
+            this.btnTreino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTreino.Location = new System.Drawing.Point(530, 305);
+            this.btnTreino.Name = "btnTreino";
+            this.btnTreino.Size = new System.Drawing.Size(170, 170);
+            this.btnTreino.TabIndex = 6;
+            this.btnTreino.UseVisualStyleBackColor = false;
+            // 
+            // btnPlanos
+            // 
+            this.btnPlanos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.btnPlanos.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnPlanos;
+            this.btnPlanos.FlatAppearance.BorderSize = 0;
+            this.btnPlanos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanos.Location = new System.Drawing.Point(355, 305);
+            this.btnPlanos.Name = "btnPlanos";
+            this.btnPlanos.Size = new System.Drawing.Size(170, 170);
+            this.btnPlanos.TabIndex = 5;
+            this.btnPlanos.UseVisualStyleBackColor = false;
+            // 
+            // btnAluno
+            // 
+            this.btnAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnAluno.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnAlunos;
+            this.btnAluno.FlatAppearance.BorderSize = 0;
+            this.btnAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAluno.Location = new System.Drawing.Point(180, 305);
+            this.btnAluno.Name = "btnAluno";
+            this.btnAluno.Size = new System.Drawing.Size(170, 170);
+            this.btnAluno.TabIndex = 4;
+            this.btnAluno.UseVisualStyleBackColor = false;
+            // 
+            // btnInstrutor
+            // 
+            this.btnInstrutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.btnInstrutor.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnInstrutor;
+            this.btnInstrutor.FlatAppearance.BorderSize = 0;
+            this.btnInstrutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstrutor.Location = new System.Drawing.Point(5, 305);
+            this.btnInstrutor.Name = "btnInstrutor";
+            this.btnInstrutor.Size = new System.Drawing.Size(170, 170);
+            this.btnInstrutor.TabIndex = 3;
+            this.btnInstrutor.UseVisualStyleBackColor = false;
+            this.btnInstrutor.Click += new System.EventHandler(this.btnInstrutor_Click);
+            // 
+            // pctSair
+            // 
+            this.pctSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.pctSair.Image = global::VivaBem_Vanzelli.Properties.Resources.fechar;
+            this.pctSair.Location = new System.Drawing.Point(805, 3);
+            this.pctSair.Name = "pctSair";
+            this.pctSair.Size = new System.Drawing.Size(46, 44);
+            this.pctSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctSair.TabIndex = 38;
+            this.pctSair.TabStop = false;
+            this.pctSair.Click += new System.EventHandler(this.pctSair_Click);
             // 
             // pctLogo
             // 
@@ -504,34 +570,6 @@
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLogo.TabIndex = 0;
             this.pctLogo.TabStop = false;
-            // 
-            // dgvValorPlanos
-            // 
-            this.dgvValorPlanos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvValorPlanos.Location = new System.Drawing.Point(5, 115);
-            this.dgvValorPlanos.Name = "dgvValorPlanos";
-            this.dgvValorPlanos.Size = new System.Drawing.Size(325, 225);
-            this.dgvValorPlanos.TabIndex = 15;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(668, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(547, 244);
-            this.dataGridView1.TabIndex = 35;
-            // 
-            // pctSair
-            // 
-            this.pctSair.BackColor = System.Drawing.Color.White;
-            this.pctSair.Image = global::VivaBem_Vanzelli.Properties.Resources.fechar;
-            this.pctSair.Location = new System.Drawing.Point(805, 3);
-            this.pctSair.Name = "pctSair";
-            this.pctSair.Size = new System.Drawing.Size(46, 44);
-            this.pctSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctSair.TabIndex = 38;
-            this.pctSair.TabStop = false;
-            this.pctSair.Click += new System.EventHandler(this.pctSair_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -544,14 +582,15 @@
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).EndInit();
             this.pnlPlanos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvValorPlanos)).EndInit();
             this.pnlCont.ResumeLayout(false);
             this.pnlUsuario.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvValorPlanos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctSair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -576,7 +615,7 @@
         private System.Windows.Forms.Label lblNumInstrutores;
         private System.Windows.Forms.Label lblInstrutores;
         private System.Windows.Forms.Label lblExercicios;
-        private System.Windows.Forms.Label lblNumexercicios;
+        private System.Windows.Forms.Label lblNumExercicios;
         private System.Windows.Forms.Label lblMatriculas;
         private System.Windows.Forms.Label lblNumMarticulas;
         private System.Windows.Forms.Label lblTreinos;
@@ -585,15 +624,16 @@
         private System.Windows.Forms.Label lblNumPlanos;
         private System.Windows.Forms.Label lblAlunos;
         private System.Windows.Forms.Label lblNumAlunos;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblHoras;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblGeral;
+        private System.Windows.Forms.Label lblvalorGeral;
         private System.Windows.Forms.Label lblValorPlano;
         private System.Windows.Forms.DataGridView dgvValorPlanos;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvContato;
         private System.Windows.Forms.PictureBox pctSair;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
