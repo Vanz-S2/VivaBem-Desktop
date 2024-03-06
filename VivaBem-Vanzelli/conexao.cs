@@ -11,6 +11,8 @@ namespace VivaBem_Vanzelli
     public static class conexao {
 
         //string de conexão com o banco de dados
+       // public static string db = "S"
+
         public static string db = "SERVER=localhost;USER=root;DATABASE=dbvivabem";
 
         //reconhecer a biblioteca do Mysql

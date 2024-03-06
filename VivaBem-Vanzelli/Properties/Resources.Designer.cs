@@ -213,6 +213,16 @@ namespace VivaBem_Vanzelli.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fernandasouza1 {
+            get {
+                object obj = ResourceManager.GetObject("fernandasouza1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoVivaBem {
             get {
                 object obj = ResourceManager.GetObject("logoVivaBem", resourceCulture);

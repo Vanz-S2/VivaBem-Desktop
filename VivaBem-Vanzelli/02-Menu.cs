@@ -132,8 +132,13 @@ namespace VivaBem_Vanzelli
 
         private void btnInstrutor_Click(object sender, EventArgs e)
         {
-            new frmInstrutor();
+            new frmInstrutor().Show();
             Hide();
+        }
+
+        private void pnlMenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

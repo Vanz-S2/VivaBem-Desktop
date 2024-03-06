@@ -38,6 +38,16 @@
             this.lblValorPlano = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblvalorGeral = new System.Windows.Forms.Label();
+            this.btnEmail = new System.Windows.Forms.Button();
+            this.btnPagamento = new System.Windows.Forms.Button();
+            this.btnExercicio = new System.Windows.Forms.Button();
+            this.btnBanner = new System.Windows.Forms.Button();
+            this.btnMatricula = new System.Windows.Forms.Button();
+            this.btnAjuda = new System.Windows.Forms.Button();
+            this.btnTreino = new System.Windows.Forms.Button();
+            this.btnPlanos = new System.Windows.Forms.Button();
+            this.btnAluno = new System.Windows.Forms.Button();
+            this.btnInstrutor = new System.Windows.Forms.Button();
             this.pnlCont = new System.Windows.Forms.Panel();
             this.lblExercicios = new System.Windows.Forms.Label();
             this.lblNumExercicios = new System.Windows.Forms.Label();
@@ -52,22 +62,12 @@
             this.lblInstrutores = new System.Windows.Forms.Label();
             this.lblNumInstrutores = new System.Windows.Forms.Label();
             this.pnlUsuario = new System.Windows.Forms.Panel();
+            this.pctSair = new System.Windows.Forms.PictureBox();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnEmail = new System.Windows.Forms.Button();
-            this.btnPagamento = new System.Windows.Forms.Button();
-            this.btnExercicio = new System.Windows.Forms.Button();
-            this.btnBanner = new System.Windows.Forms.Button();
-            this.btnMatricula = new System.Windows.Forms.Button();
-            this.btnAjuda = new System.Windows.Forms.Button();
-            this.btnTreino = new System.Windows.Forms.Button();
-            this.btnPlanos = new System.Windows.Forms.Button();
-            this.btnAluno = new System.Windows.Forms.Button();
-            this.btnInstrutor = new System.Windows.Forms.Button();
-            this.pctSair = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).BeginInit();
             this.pnlPlanos.SuspendLayout();
@@ -100,6 +100,7 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(1220, 655);
             this.pnlMenu.TabIndex = 0;
+            this.pnlMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMenu_Paint);
             // 
             // dgvContato
             // 
@@ -150,10 +151,16 @@
             // 
             // dgvValorPlanos
             // 
+            this.dgvValorPlanos.AllowUserToAddRows = false;
+            this.dgvValorPlanos.AllowUserToDeleteRows = false;
+            this.dgvValorPlanos.AllowUserToResizeColumns = false;
+            this.dgvValorPlanos.AllowUserToResizeRows = false;
+            this.dgvValorPlanos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvValorPlanos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
             this.dgvValorPlanos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvValorPlanos.Location = new System.Drawing.Point(5, 115);
+            this.dgvValorPlanos.Location = new System.Drawing.Point(0, 115);
             this.dgvValorPlanos.Name = "dgvValorPlanos";
-            this.dgvValorPlanos.Size = new System.Drawing.Size(325, 225);
+            this.dgvValorPlanos.Size = new System.Drawing.Size(340, 230);
             this.dgvValorPlanos.TabIndex = 15;
             // 
             // lblValorPlano
@@ -194,6 +201,127 @@
             this.lblvalorGeral.TabIndex = 32;
             this.lblvalorGeral.Text = "000";
             this.lblvalorGeral.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // btnEmail
+            // 
+            this.btnEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnEmail.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnEmail;
+            this.btnEmail.FlatAppearance.BorderSize = 0;
+            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmail.Location = new System.Drawing.Point(705, 480);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(170, 170);
+            this.btnEmail.TabIndex = 12;
+            this.btnEmail.UseVisualStyleBackColor = false;
+            // 
+            // btnPagamento
+            // 
+            this.btnPagamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.btnPagamento.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnPagamento;
+            this.btnPagamento.FlatAppearance.BorderSize = 0;
+            this.btnPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagamento.Location = new System.Drawing.Point(530, 480);
+            this.btnPagamento.Name = "btnPagamento";
+            this.btnPagamento.Size = new System.Drawing.Size(170, 170);
+            this.btnPagamento.TabIndex = 11;
+            this.btnPagamento.UseVisualStyleBackColor = false;
+            // 
+            // btnExercicio
+            // 
+            this.btnExercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnExercicio.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnExercicios;
+            this.btnExercicio.FlatAppearance.BorderSize = 0;
+            this.btnExercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExercicio.Location = new System.Drawing.Point(355, 480);
+            this.btnExercicio.Name = "btnExercicio";
+            this.btnExercicio.Size = new System.Drawing.Size(170, 170);
+            this.btnExercicio.TabIndex = 10;
+            this.btnExercicio.UseVisualStyleBackColor = false;
+            // 
+            // btnBanner
+            // 
+            this.btnBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.btnBanner.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnBanner;
+            this.btnBanner.FlatAppearance.BorderSize = 0;
+            this.btnBanner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBanner.Location = new System.Drawing.Point(180, 480);
+            this.btnBanner.Name = "btnBanner";
+            this.btnBanner.Size = new System.Drawing.Size(170, 170);
+            this.btnBanner.TabIndex = 9;
+            this.btnBanner.UseVisualStyleBackColor = false;
+            // 
+            // btnMatricula
+            // 
+            this.btnMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnMatricula.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnMatricula;
+            this.btnMatricula.FlatAppearance.BorderSize = 0;
+            this.btnMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMatricula.Location = new System.Drawing.Point(5, 480);
+            this.btnMatricula.Name = "btnMatricula";
+            this.btnMatricula.Size = new System.Drawing.Size(170, 170);
+            this.btnMatricula.TabIndex = 8;
+            this.btnMatricula.UseVisualStyleBackColor = false;
+            // 
+            // btnAjuda
+            // 
+            this.btnAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.btnAjuda.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnAjuda;
+            this.btnAjuda.FlatAppearance.BorderSize = 0;
+            this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjuda.Location = new System.Drawing.Point(705, 305);
+            this.btnAjuda.Name = "btnAjuda";
+            this.btnAjuda.Size = new System.Drawing.Size(170, 170);
+            this.btnAjuda.TabIndex = 7;
+            this.btnAjuda.UseVisualStyleBackColor = false;
+            // 
+            // btnTreino
+            // 
+            this.btnTreino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnTreino.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnTreino;
+            this.btnTreino.FlatAppearance.BorderSize = 0;
+            this.btnTreino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTreino.Location = new System.Drawing.Point(530, 305);
+            this.btnTreino.Name = "btnTreino";
+            this.btnTreino.Size = new System.Drawing.Size(170, 170);
+            this.btnTreino.TabIndex = 6;
+            this.btnTreino.UseVisualStyleBackColor = false;
+            // 
+            // btnPlanos
+            // 
+            this.btnPlanos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.btnPlanos.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnPlanos;
+            this.btnPlanos.FlatAppearance.BorderSize = 0;
+            this.btnPlanos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanos.Location = new System.Drawing.Point(355, 305);
+            this.btnPlanos.Name = "btnPlanos";
+            this.btnPlanos.Size = new System.Drawing.Size(170, 170);
+            this.btnPlanos.TabIndex = 5;
+            this.btnPlanos.UseVisualStyleBackColor = false;
+            // 
+            // btnAluno
+            // 
+            this.btnAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.btnAluno.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnAlunos;
+            this.btnAluno.FlatAppearance.BorderSize = 0;
+            this.btnAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAluno.Location = new System.Drawing.Point(180, 305);
+            this.btnAluno.Name = "btnAluno";
+            this.btnAluno.Size = new System.Drawing.Size(170, 170);
+            this.btnAluno.TabIndex = 4;
+            this.btnAluno.UseVisualStyleBackColor = false;
+            // 
+            // btnInstrutor
+            // 
+            this.btnInstrutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
+            this.btnInstrutor.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnInstrutor;
+            this.btnInstrutor.FlatAppearance.BorderSize = 0;
+            this.btnInstrutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstrutor.Location = new System.Drawing.Point(5, 305);
+            this.btnInstrutor.Name = "btnInstrutor";
+            this.btnInstrutor.Size = new System.Drawing.Size(170, 170);
+            this.btnInstrutor.TabIndex = 3;
+            this.btnInstrutor.UseVisualStyleBackColor = false;
+            this.btnInstrutor.Click += new System.EventHandler(this.btnInstrutor_Click);
             // 
             // pnlCont
             // 
@@ -383,6 +511,18 @@
             this.pnlUsuario.Size = new System.Drawing.Size(855, 140);
             this.pnlUsuario.TabIndex = 1;
             // 
+            // pctSair
+            // 
+            this.pctSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.pctSair.Image = global::VivaBem_Vanzelli.Properties.Resources.fechar;
+            this.pctSair.Location = new System.Drawing.Point(805, 3);
+            this.pctSair.Name = "pctSair";
+            this.pctSair.Size = new System.Drawing.Size(46, 44);
+            this.pctSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctSair.TabIndex = 38;
+            this.pctSair.TabStop = false;
+            this.pctSair.Click += new System.EventHandler(this.pctSair_Click);
+            // 
             // lblHora
             // 
             this.lblHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(183)))), ((int)(((byte)(5)))));
@@ -422,145 +562,6 @@
             this.lblUsuario.Text = "USUÁRIO";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnEmail
-            // 
-            this.btnEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnEmail.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnEmail;
-            this.btnEmail.FlatAppearance.BorderSize = 0;
-            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmail.Location = new System.Drawing.Point(705, 480);
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(170, 170);
-            this.btnEmail.TabIndex = 12;
-            this.btnEmail.UseVisualStyleBackColor = false;
-            // 
-            // btnPagamento
-            // 
-            this.btnPagamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
-            this.btnPagamento.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnPagamento;
-            this.btnPagamento.FlatAppearance.BorderSize = 0;
-            this.btnPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagamento.Location = new System.Drawing.Point(530, 480);
-            this.btnPagamento.Name = "btnPagamento";
-            this.btnPagamento.Size = new System.Drawing.Size(170, 170);
-            this.btnPagamento.TabIndex = 11;
-            this.btnPagamento.UseVisualStyleBackColor = false;
-            // 
-            // btnExercicio
-            // 
-            this.btnExercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnExercicio.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnExercicios;
-            this.btnExercicio.FlatAppearance.BorderSize = 0;
-            this.btnExercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExercicio.Location = new System.Drawing.Point(355, 480);
-            this.btnExercicio.Name = "btnExercicio";
-            this.btnExercicio.Size = new System.Drawing.Size(170, 170);
-            this.btnExercicio.TabIndex = 10;
-            this.btnExercicio.UseVisualStyleBackColor = false;
-            // 
-            // btnBanner
-            // 
-            this.btnBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
-            this.btnBanner.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnBanner;
-            this.btnBanner.FlatAppearance.BorderSize = 0;
-            this.btnBanner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBanner.Location = new System.Drawing.Point(180, 480);
-            this.btnBanner.Name = "btnBanner";
-            this.btnBanner.Size = new System.Drawing.Size(170, 170);
-            this.btnBanner.TabIndex = 9;
-            this.btnBanner.UseVisualStyleBackColor = false;
-            // 
-            // btnMatricula
-            // 
-            this.btnMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnMatricula.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnMatricula;
-            this.btnMatricula.FlatAppearance.BorderSize = 0;
-            this.btnMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMatricula.Location = new System.Drawing.Point(5, 480);
-            this.btnMatricula.Name = "btnMatricula";
-            this.btnMatricula.Size = new System.Drawing.Size(170, 170);
-            this.btnMatricula.TabIndex = 8;
-            this.btnMatricula.UseVisualStyleBackColor = false;
-            // 
-            // btnAjuda
-            // 
-            this.btnAjuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
-            this.btnAjuda.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnAjuda;
-            this.btnAjuda.FlatAppearance.BorderSize = 0;
-            this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjuda.Location = new System.Drawing.Point(705, 305);
-            this.btnAjuda.Name = "btnAjuda";
-            this.btnAjuda.Size = new System.Drawing.Size(170, 170);
-            this.btnAjuda.TabIndex = 7;
-            this.btnAjuda.UseVisualStyleBackColor = false;
-            // 
-            // btnTreino
-            // 
-            this.btnTreino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnTreino.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnTreino;
-            this.btnTreino.FlatAppearance.BorderSize = 0;
-            this.btnTreino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTreino.Location = new System.Drawing.Point(530, 305);
-            this.btnTreino.Name = "btnTreino";
-            this.btnTreino.Size = new System.Drawing.Size(170, 170);
-            this.btnTreino.TabIndex = 6;
-            this.btnTreino.UseVisualStyleBackColor = false;
-            // 
-            // btnPlanos
-            // 
-            this.btnPlanos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
-            this.btnPlanos.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnPlanos;
-            this.btnPlanos.FlatAppearance.BorderSize = 0;
-            this.btnPlanos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlanos.Location = new System.Drawing.Point(355, 305);
-            this.btnPlanos.Name = "btnPlanos";
-            this.btnPlanos.Size = new System.Drawing.Size(170, 170);
-            this.btnPlanos.TabIndex = 5;
-            this.btnPlanos.UseVisualStyleBackColor = false;
-            // 
-            // btnAluno
-            // 
-            this.btnAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.btnAluno.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnAlunos;
-            this.btnAluno.FlatAppearance.BorderSize = 0;
-            this.btnAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAluno.Location = new System.Drawing.Point(180, 305);
-            this.btnAluno.Name = "btnAluno";
-            this.btnAluno.Size = new System.Drawing.Size(170, 170);
-            this.btnAluno.TabIndex = 4;
-            this.btnAluno.UseVisualStyleBackColor = false;
-            // 
-            // btnInstrutor
-            // 
-            this.btnInstrutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(191)))), ((int)(((byte)(157)))));
-            this.btnInstrutor.BackgroundImage = global::VivaBem_Vanzelli.Properties.Resources.btnInstrutor;
-            this.btnInstrutor.FlatAppearance.BorderSize = 0;
-            this.btnInstrutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstrutor.Location = new System.Drawing.Point(5, 305);
-            this.btnInstrutor.Name = "btnInstrutor";
-            this.btnInstrutor.Size = new System.Drawing.Size(170, 170);
-            this.btnInstrutor.TabIndex = 3;
-            this.btnInstrutor.UseVisualStyleBackColor = false;
-            this.btnInstrutor.Click += new System.EventHandler(this.btnInstrutor_Click);
-            // 
-            // pctSair
-            // 
-            this.pctSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.pctSair.Image = global::VivaBem_Vanzelli.Properties.Resources.fechar;
-            this.pctSair.Location = new System.Drawing.Point(805, 3);
-            this.pctSair.Name = "pctSair";
-            this.pctSair.Size = new System.Drawing.Size(46, 44);
-            this.pctSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctSair.TabIndex = 38;
-            this.pctSair.TabStop = false;
-            this.pctSair.Click += new System.EventHandler(this.pctSair_Click);
-            // 
             // pctLogo
             // 
             this.pctLogo.Image = global::VivaBem_Vanzelli.Properties.Resources.logoVivaBem;
@@ -570,6 +571,12 @@
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLogo.TabIndex = 0;
             this.pctLogo.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmMenuPrincipal
             // 
